@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+    <h3><b><u>Статистика повторений слов:</u></b></h3>
+    <p><a href="/Home/Clear">Очистить историю</a></p>
+    <div class="well">
+        <ul>
+            @foreach (var b in ViewBag.Words)
+            {
+                <li>Слово:<u>@b.Name-@b.Count</u></li>
+            }
+        </ul>
+    </div>
+
+</body>
+</html>
